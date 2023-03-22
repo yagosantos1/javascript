@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site</title>
+</head>
+<body>
+    <img onclick="Executar('m');" src='maca.jpg' width="100px">
+    <img onclick="Executar('u');" src='uva.jpg' width="100px">
+    <img onclick="Executar('b');" src='banana.jpg' width="100px">
+    <button onclick="Limpar();"> LIMPAR</button>
+    <br><br>
+    TOTAL DE MAÇÃS: <span id="total_maca"> 0 </span>
+    <div class="maca" id="maca">       </div>
+    TOTAL DE UVA: <span id="total_maca"> 0 </span>
+    <div class="uva" id="banana">   </div>
+    TOTAL DE BANANA: <span id="total_maca"> 0 </span>
+    <div class="banana" id="uva"> </div>
+
+    </body>
+    <script>
+        m=0;
+        u=0;
+        b=0;
+
+        function Limpar ()
+        {
+            maca.innerHTML ="";
+            uva.innerHTML ="";
+            banana.innerHTML ="";
+            total_maca.innerHTML="0";
+            total_uva.innerHTML="0";
+            total_banana.innerHTML="0";
+            m=0;
+            u=0;
+            b=0;
+
+              
+        }
+        function Executar (letra) 
+        { 
+            if (letra =='m')
+          
+            {
+                maca.innerHTML += "<img src='maca.jpg' width='100px'>";
+                m = m+1;
+            total_maca.innerHTML =m;
+            }
+            if (letra =='u')
+        {
+            uva.innerHTML += "<img src='uva.jpg' width='100px'>";
+            u = u+1;
+            total_uva.innerHTML =u
+        }  
+            if (letra =='b')
+        {
+        banana.innerHTML += "<img src='banana.jpg' width='100px'> ";
+        b = b+1;
+            total_banana.innerHTML =b;
+       }
+        }
+    </script>
+    
+</body>
+</html>
